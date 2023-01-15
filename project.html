@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Booking Management system</title>
+<link rel="stylesheet" href="source.css"/>
+</head>
+<body>
+<div class="header">
+<h1>Movie Mania</h1>
+<div class= "search_icon">
+<form>
+<input type="text" name="text" class ="search_box">
+<input type="submit" name="search" class="search">
+</form>
+</div>
+
+<div class="topnav">
+  <a href="#">Home</a>
+  <a href="about.htm">About</a>
+  <a href="contact us.html">Contact</a>
+  <a href="login.html" >Login</a>
+</div>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1/ 4</div>
+  <img src="movies11.jpg" style="width:130%" "height:1%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="movies44.jpg" style="width:130%" "height:1%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="movies66.jpg" style="width:130%" "height:5%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4/ 4</div>
+  <img src="1920_400.jpg" style="width:120%" "height:0.1%">
+  <div class="text"></div>
+
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+<hr />
+<section class="main-container">
+<div class="sidebar">
+<form action="#">
+<div class="sidebar-groups">
+<h3 class="sg-title">Categories</h3>
+<input type="Checkbox" id="adventure" name="adventure" value="adventure">
+<label for="adventure">Adventure</label><br>
+<input type="Checkbox" id="action" name="action" value="action">
+<label for="action">Action</label><br>
+<input type="Checkbox" id="animation" name="animation" value="animation">
+<label for="animation">Animation</label><br>
+<input type="Checkbox" id="comedy" name="comedy" value="comedy">
+<label for="comedy">Comedy</label><br>
+<input type="Checkbox" id="science" name="science" value="science">
+<label for="science">Science Fiction</label><br>
+<input type="Checkbox" id="thriller" name="thriller" value="thriller">
+<label for="thriller">Thriller</label><br>
+<input type="Checkbox" id="history" name="history" value="history">
+<label for="history">History</label><br>
+<input type="Checkbox" id="documentary" name="documentary" value="documentary">
+<label for="documentary">Documentary</label><br>
+<input type="Checkbox" id="fantasy" name="fantasy" value="fantasy">
+<label for="fantasy">Fantasy</label><br>
+</div>
+<div class="sidebar-groups">
+<h3 class="sg-title">Language</h3>
+<input type="checkbox" id="english" name="english" value="english">
+<label for="english">English</label><br>
+<input type="checkbox" id="spanish" name="spanish" value="spanish">
+<label for="spanish">Spanish</label><br>
+<input type="checkbox" id="hindi" name="hindi" value="hindi">
+<label for="hindi">Hindi</label><br>
+</div>
+<div class="sidebar-groups">
+<h3 class="sg-title">Time</h3>
+<input type="radio" id="morning" name="morning" value="morning">
+<label for="morning">Morning</label><br>
+<input type="radio" id="night" name="night" value="night">
+<label for="night">Night</label><br>
+</div>
+<div class="sidebar-groups">
+<a href="#" class="btn-1 btn">Apply Filters</a>
+</div>
+</form>
+</div>
+<div class="movies-container">
+<div class="upcoming-img-box">
+<img src="movie21.jfif" width=100% height=100% alt="">
+<p class="upcoming-title">Upcoming Movie</p>
+<div class="buttons">
+<a href="#" class="btn">Book Now</a>
+<a href="#" class="btn-alt btn">Play Trailer</a>
+</div>
+</div>
+<div class="current-movies">
+<div class="current-movie">
+<div class="cm-img-box">
+<img src="movies999.jpg" width=100% height=100% alt="">
+</div>
+<h3 class="movie-title">Cirkus</h3>
+<p class="screen-name">Screen : Platinum</p>
+<div class="booking">
+<h2 class="price">500 Rs/-</h2>
+<a href="#" class="btn">Buy Tickets</a>
+</div>
+</div>
+<div class="current-movie">
+<div class="cm-img-box">
+<img src="movies77.jpg" width=100% height=100% alt="">
+</div>
+<h3 class="movie-title">MSD:The untold story</h3>
+<p class="screen-name">Screen : Gold</p>
+<div class="booking">
+<h2 class="price">400 Rs/-</h2>
+<a href="#" class="btn">Buy Tickets</a>
+</div>
+</div>
+<div class="current-movie">
+<div class="cm-img-box">
+<img src="movies88.jpg" width=100% height= 100%alt="">
+</div>
+<h3 class="movie-title">Omg</h3>
+<p class="screen-name">Screen : Silver</p>
+<div class="booking">
+<h2 class="price">350 Rs/-</h2>
+<a href="#" class="btn">Buy Tickets</a>
+</div>
+</div>
+<div class="current-movie">
+<div class="cm-img-box">
+<img src="movies500.jpg" width=100% height=100%  alt="">
+</div>
+<h3 class="movie-title">Dhrisyam 2</h3>
+<p class="screen-name">Screen : Platinum</p>
+<div class="booking">
+<h2 class="price">500 Rs/-</h2>
+<a href="#" class="btn">Buy Tickets</a>
+</div>
+</div>
+<div class="current-movie">
+<div class="cm-img-box">
+<img src="movies700.png" width=100% height=100% alt="">
+</div>
+<h3 class="movie-title">I wanna dance with somebody</h3>
+<p class="screen-name">Screen : Platinum</p>
+<div class="booking">
+<h2 class="price">500 Rs/-</h2>
+<a href="#" class="btn">Buy Tickets</a>
+</div>
+</div>
+<div class="current-movie">
+<div class="cm-img-box">
+<img src="movies800.jpg" width=100% height=100% alt="">
+</div>
+<h3 class="movie-title">Bhediya</h3>
+<p class="screen-name">Screen : Platinum</p>
+<div class="booking">
+<h2 class="price">500 Rs/-</h2>
+<a href="#" class="btn">Buy Tickets</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</body>
+</html> 
